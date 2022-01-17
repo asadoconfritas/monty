@@ -37,5 +37,7 @@ void zpush(stack_t **stack, unsigned int line_number)
 	}
 	n = atoi(astring);
 	if (global.mode == 1)
-
+		add_dnodeint(stack, n, line_number);
+	if (global.mode == 0)
+		add_dnodeint_end(stack, n, line_number);
 }

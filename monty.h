@@ -35,6 +35,20 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct global - manipulate linked lists
+ * @mode: stack or queue
+ * @head: pointer
+ * Description: struct w 2 modes
+ **/
+typedef struct global
+{
+	int mode;
+	stack_t *head;
+}global_t;
+
+extern global_t global;
+
 void part2(char *zbuffer, instruction_t (*comms)[], unsigned int line_number, stack_t **stack);
 void zpint(stack_t **stack, unsigned int line_number);
 void zpop(stack_t **stack, unsigned int line_number);
