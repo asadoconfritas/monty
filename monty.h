@@ -5,8 +5,6 @@
 #include <stdio.h>
 #include <string.h>
 
-ssize_t getline(char **lineptr, size_t *n, FILE *stream);
-
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -37,20 +35,6 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-/**
- * struct global - manipulate linked lists
- * @mode: stack or queue
- * @head: pointer
- * Description: struct w 2 modes
- **/
-typedef struct global
-{
-	int mode;
-	stack_t *head;
-}global_t;
-
-extern global_t global;
-
 void part2(char *zbuffer, instruction_t (*comms)[], unsigned int line_number, stack_t **stack);
 void zpint(stack_t **stack, unsigned int line_number);
 void zpop(stack_t **stack, unsigned int line_number);
@@ -58,8 +42,7 @@ void zswap(stack_t **stack, unsigned int line_number);
 void zadd(stack_t **stack, unsigned int line_number);
 void zfree(stack_t **stack);
 void zpall(stack_t **stack, unsigned int line_number);
-void zpush(stack_t **head, unsigned int line_number);
-void add_dnodeint(stack_t **head, const int n, unsigned int line_number);
-void add_dnodeint_end(stack_t **head, const int n, unsigned int line_number);
+void zpush(stack_t **stack, unsigned int line_number);
+void zpushaux(char *nstring, stack_t **stack, unsigned int line_number);
 
 #endif

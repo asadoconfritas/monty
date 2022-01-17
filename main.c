@@ -67,7 +67,7 @@ stack_t **stack)
 	if (zbuffer[0] == '#')
 		return;
 
-	for (cursor = 0; cursor < 4; cursor++)
+	for (cursor = 0; cursor < 6; cursor++)
 	{
 		if (!strcmp(zbuffer, (*comms)[cursor].opcode))
 		{
