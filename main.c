@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 	unsigned int line_number = 1;
 	int xdgetl = 0;
 	stack_t *stack = NULL;
-	instruction_t comms[4] = {{"pint", zpint},
+	instruction_t comms[6] = {{"pint", zpint}, {"pall", zpall}, {"push", zpush},
 	{"pop", zpop}, {"swap", zswap}, {"add", zadd}};
 
 	if (argc != 2)
