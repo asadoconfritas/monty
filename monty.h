@@ -56,7 +56,7 @@ void zswap(stack_t **stack, unsigned int line_number);
 void zadd(stack_t **stack, unsigned int line_number);
 void zfree(stack_t **stack);
 void zpall(stack_t **stack, unsigned int line_number);
-void zpush(stack_t **stack, unsigned int line_number);
+void zpush(stack_t **head, unsigned int line_number);
 void add_dnodeint(stack_t **head, const int n, unsigned int line_number);
 void add_dnodeint_end(stack_t **head, const int n, unsigned int line_number);
 

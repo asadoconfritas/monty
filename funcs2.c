@@ -20,11 +20,11 @@ void zpall(stack_t **stack, unsigned int line_number)
 
 /**
  * zpush - pushes an element
- * @stack: pointer
+ * @head: pointer
  * @line_number: n of line
  * Return: end program
  **/
-void zpush(stack_t **stack, unsigned int line_number)
+void zpush(stack_t **head, unsigned int line_number)
 {
 	char *astring;
 	int n = 0;
@@ -37,7 +37,7 @@ void zpush(stack_t **stack, unsigned int line_number)
 	}
 	n = atoi(astring);
 	if (global.mode == 1)
-		add_dnodeint(stack, n, line_number);
+		add_dnodeint(head, n, line_number);
 	if (global.mode == 0)
-		add_dnodeint_end(stack, n, line_number);
+		add_dnodeint_end(head, n, line_number);
 }
